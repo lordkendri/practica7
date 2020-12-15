@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <link rel="stylesheet" href="Estadistica.css">
+        <title>Estadistica</title>
+    </head>
+    <body>
+        <div>
+            <section class="form">
+                <h4>Valores de la grafica</h4>
+                <div class="wrap">
+                    <ul class= "tabs">
+                        <li><a href="#tab1"><span class="tab2020">2020</span></a></li>
+                        <li><a href="#tab2"><span class="tab2016">2016</span></a></li>
+                        <li><a href="#tab3"><span class="tab2012">2012</span></a></li>
+                        <li><a href="#tab4"><span class="tab2008">2008</span></a></li>
+                        <li><a href="#tab5"><span class="tab 2004">2004</span></a></li>
+                    </ul>
+                </div>
+                <div class="secciones">
+                    <article id="tab1">
+                        <input class="textos" type="text" id="col2020" value="0" placeholder="Colombia">
+                        <input class="textos" type="text" id="cub2020" value="1" placeholder="Cuba">
+                        <input class="textos" type="text" id="p2020" value="2" placeholder="Panama">
+                        <input class="textos" type="text" id="ch2020" value="33" placeholder="Chile">
+                        <input class="textos" type="text" id="mex2020" value="4" placeholder="Mexico">
+                        <input class="textos" type="text" id="pe2020" value="32" placeholder="Peru">
+                        <input class="textos" type="text" id="ur2020" value="11" placeholder="Uruguay">
+                        <input class="textos" type="text" id="rd2020" value="10" placeholder="Republica Dominicana">
+                    </article>
+                    <article id="tab2">
+                        <input class="textos" type="text" id="col2016" value="0" placeholder="Colombia">
+                        <input class="textos" type="text" id="cub2016" value="1" placeholder="Cuba">
+                        <input class="textos" type="text" id="p2016" value="2" placeholder="Panama">
+                        <input class="textos" type="text" id="ch2016" value="33" placeholder="Chile">
+                        <input class="textos" type="text" id="mex2016" value="4" placeholder="Mexico">
+                        <input class="textos" type="text" id="pe2016" value="32" placeholder="Peru">
+                        <input class="textos" type="text" id="ur2016" value="11" placeholder="Uruguay">
+                        <input class="textos" type="text" id="rd2016" value="10" placeholder="Republica Dominicana">
+                    </article>
+                    <article id="tab3">
+                        <input class="textos" type="text" id="col2012" value="0" placeholder="Colombia">
+                        <input class="textos" type="text" id="cub2012" value="1" placeholder="Cuba">
+                        <input class="textos" type="text" id="p2012" value="2" placeholder="Panama">
+                        <input class="textos" type="text" id="ch2012" value="33" placeholder="Chile">
+                        <input class="textos" type="text" id="mex2012" value="4" placeholder="Mexico">
+                        <input class="textos" type="text" id="pe2012" value="32" placeholder="Peru">
+                        <input class="textos" type="text" id="ur2012" value="11" placeholder="Uruguay">
+                        <input class="textos" type="text" id="rd2012" value="10" placeholder="Republica Dominicana">
+                    </article>
+                    <article id="tab4">
+                        <input class="textos" type="text" id="col2008" value="0" placeholder="Colombia">
+                        <input class="textos" type="text" id="cub2008" value="1" placeholder="Cuba">
+                        <input class="textos" type="text" id="p20080" value="2" placeholder="Panama">
+                        <input class="textos" type="text" id="ch2008" value="33" placeholder="Chile">
+                        <input class="textos" type="text" id="mex2008" value="4" placeholder="Mexico">
+                        <input class="textos" type="text" id="pe2008" value="32" placeholder="Peru">
+                        <input class="textos" type="text" id="ur2008" value="11" placeholder="Uruguay">
+                        <input class="textos" type="text" id="rd2008" value="10" placeholder="Republica Dominicana">
+                    </article>
+                    <article id="tab5">
+                        <input class="textos" type="text" id="col2008" value="0" placeholder="Colombia">
+                        <input class="textos" type="text" id="cub2008" value="1" placeholder="Cuba">
+                        <input class="textos" type="text" id="p2008" value="2" placeholder="Panama">
+                        <input class="textos" type="text" id="ch2008" value="33" placeholder="Chile">
+                        <input class="textos" type="text" id="mex2008" value="4" placeholder="Mexico">
+                        <input class="textos" type="text" id="pe2008" value="32" placeholder="Peru">
+                        <input class="textos" type="text" id="ur2008" value="11" placeholder="Uruguay">
+                        <input class="textos" type="text" id="rd2008" value="10" placeholder="Republica Dominicana">
+                    </article>
+                    <input class="Ingresar" type="submit" value="Ingresar">
+                </div>
+            </section>       
+        </div>
+        <div class='buttons'>
+            <button id='2004'>
+                2004
+            </button>
+            <button id='2008'>
+                2008
+            </button>
+            <button id='2012'>
+                2012
+            </button>
+            <button id='2016'>
+                2016
+            </button>
+            <button id='2020' class='active'>
+            2020
+            </button>
+        </div>
+        <div id="container"></div>
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+        <script src="https://code.highcharts.com/modules/export-data.js"></script>
+        <script src="Estadistica.js"></script>
+        <script src="tabs.js"></script>
+        <script src ="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    </body>
+</html>
+

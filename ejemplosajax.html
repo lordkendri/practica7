@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script type="text/javascript" language="javascript">
+
+            var Creacion_request = false;
+        
+            function makeRequest(url) {
+        
+                Creacion_request = false;
+        
+                if (window.XMLHttpRequest) {
+                    Creacion_request = new XMLHttpRequest();
+                    if (Creacion_request.overrideMimeType) {
+                        Creacion_request.overrideMimeType('text/xml');
+                        //Se utiliza 'text/xml' porque algunos navegadores no
+                        //procesan el XMLHTTP
+                    }
+                } else if (window.ActiveXObject) {
+                    try {
+                        Creacion_request = new ActiveXObject("Msxml2.XMLHTTP");
+                    } catch (e) {
+                        try {
+                            Creacion_request = new ActiveXObject("Microsoft.XMLHTTP");
+                        } catch (e) {}
+                    }
+                }
+        
+                if (!Creacion_request) {
+                    alert('Falla :( No es posible crear una instancia XMLHTTP');
+                    return false;
+                }
+                Creacion_request.onreadystatechange = alertContents;
+                Creacion_request.open('GET', url, true);
+                Creacion_request.send();
+        
+            }
+        
+            function alertContents() {
+        
+                if (Creacion_request.readyState == 4) {
+                    if (Creacion_request.status == 200) {
+                        alert(Creacion_request.responseText);
+                    } else {
+                        alert('Hubo problemas con la petición.');
+                    }
+                }
+        
+            }
+        </script>
+        <span
+            style="cursor: pointer; text-decoration: underline"
+            onclick="makeRequest('test.html')">
+                <!--Hacer una petición-->
+        </span>
+    </body>
+</html>
